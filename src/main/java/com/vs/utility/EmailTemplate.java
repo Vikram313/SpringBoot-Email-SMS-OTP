@@ -1,4 +1,4 @@
-package com.shri.utility;
+package com.vs.utility;
 
 import java.io.File;
 import java.io.IOException;

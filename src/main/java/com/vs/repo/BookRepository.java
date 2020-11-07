@@ -1,10 +1,10 @@
-package com.shri.repo;
+package com.vs.repo;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 
-import com.shri.model.Book;
+import com.vs.model.Book;
 
 /**
  * @author shrisowdhaman

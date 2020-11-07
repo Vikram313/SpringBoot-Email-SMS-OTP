@@ -1,4 +1,4 @@
-package com.shri.controller;
+package com.vs.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,9 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shri.service.MyEmailService;
-import com.shri.service.OtpService;
-import com.shri.utility.EmailTemplate;
+import com.vs.service.MyEmailService;
+import com.vs.service.OtpService;
+import com.vs.service.SmsService;
+import com.vs.utility.EmailTemplate;
 
 /**
  * @author shrisowdhaman
@@ -32,6 +33,9 @@ public class OtpController {
 	
 	@Autowired
 	public MyEmailService myEmailService;
+	
+	@Autowired
+	public SmsService smsService;
 
 	@GetMapping("/generateOtp")
 	public String generateOtp(){
@@ -42,9 +46,11 @@ public class OtpController {
 		int otp = otpService.generateOTP(username);
 		 
 		logger.info("OTP : "+otp);
+		//Send SMS
+		smsService.sendSMS();
 		
 		//Generate The Template to send OTP 
-		EmailTemplate template = new EmailTemplate("SendOtp.html");
+		EmailTemplate template = new EmailTemplate("../../SendOtp.html");
 		
 		Map<String,String> replacements = new HashMap<String,String>();
 		replacements.put("user", username);
@@ -52,7 +58,7 @@ public class OtpController {
 		 
 		String message = template.getTemplate(replacements);
 		
-		myEmailService.sendOtpMessage("shrisowdhaman@gmail.com", "OTP -SpringBoot", message);
+		myEmailService.sendOtpMessage("vikram.optum@gmail.com", "OTP -SpringBoot", message);
 		
 		return "otppage";
 	}

@@ -1,4 +1,4 @@
-package com.shri.config;
+package com.vs.config;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,8 +1,8 @@
-package com.shri.repo;
+package com.vs.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.shri.model.User;
+import com.vs.model.User;
 /**
  * @author shrisowdhaman
  * Dec 14, 2017

@@ -1,4 +1,4 @@
-package com.shri.model;
+package com.vs.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;

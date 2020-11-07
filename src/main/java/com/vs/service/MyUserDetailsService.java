@@ -1,4 +1,4 @@
-package com.shri.service;
+package com.vs.service;
 
 import java.util.Arrays;
 
@@ -10,8 +10,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.shri.model.User;
-import com.shri.repo.UserRepository;
+import com.vs.model.User;
+import com.vs.repo.UserRepository;
 
 /**
  * @author shrisowdhaman

@@ -1,4 +1,4 @@
-package com.shri.service;
+package com.vs.service;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;

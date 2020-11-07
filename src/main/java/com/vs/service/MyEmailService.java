@@ -1,4 +1,4 @@
-package com.shri.service;
+package com.vs.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +31,6 @@ public class MyEmailService  {
 		 logger.info(message);
 		 
 		 //Uncomment to send mail
-		 //javaMailSender.send(simpleMailMessage);
+		 javaMailSender.send(simpleMailMessage);
 	}
 }

@@ -1,4 +1,4 @@
-package com.shri.controller;
+package com.vs.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shri.repo.BookRepository;
-import com.shri.service.OtpService;
+import com.vs.repo.BookRepository;
+import com.vs.service.OtpService;
 
 
 @Controller
