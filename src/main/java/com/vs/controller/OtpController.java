@@ -58,7 +58,7 @@ public class OtpController {
 		 
 		String message = template.getTemplate(replacements);
 		
-		myEmailService.sendOtpMessage("vikram.optum@gmail.com", "OTP -SpringBoot", message);
+		myEmailService.sendOtpMessage("xyz@gmail.com", "OTP -SpringBoot", message);
 		
 		return "otppage";
 	}
